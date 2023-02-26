@@ -102,7 +102,7 @@ namespace RomanArabianNumbersConverter
 
         private void ProcessOperator(string expression, Stack<char> operatorCharStack, Stack<int> operandsStack, char currentCharacter)
         {
-            if (operatorCharStack.Count > 0 
+            while (operatorCharStack.Count > 0 
                 && IsOperator(operatorCharStack.Peek()) 
                 && _operatorsDictionary[operatorCharStack.Peek()].Priority >= _operatorsDictionary[currentCharacter].Priority)
             {
